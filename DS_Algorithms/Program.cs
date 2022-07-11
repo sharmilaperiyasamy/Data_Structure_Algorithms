@@ -1,7 +1,8 @@
-﻿Console.WriteLine("DataStructure Algorithms : \n0.Exit\n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detection\n6.Prime numbers between 1 to 1000\nEnter your option");
+﻿Console.WriteLine("DataStructure Algorithms : \n0.Exit\n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detection\n6.Prime numbers between 1 to 1000\n7.unordered list\nEnter your option");
 int option = Convert.ToInt32(Console.ReadLine());
 
 DS_Algorithms.Logical_Programs program = new DS_Algorithms.Logical_Programs();
+DS_Algorithms.DataStructure ds = new DS_Algorithms.DataStructure();
 
 switch (option)
 {
@@ -57,6 +58,11 @@ switch (option)
     case 6:
         Console.WriteLine("Prime Numbers between the range 1 to 1000");
         program.prime();
+        break;
+    case 7:
+        Console.WriteLine("Enter word to search:");
+        string w = Console.ReadLine();
+        ds.UnOrdered(w);
         break;
     default:
         Console.WriteLine("Invalid option");
