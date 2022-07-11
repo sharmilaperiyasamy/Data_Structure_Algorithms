@@ -1,4 +1,5 @@
-﻿Console.WriteLine("DataStructure Algorithms : \n0.Exit\n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detection\n6.Prime numbers between 1 to 1000\n7.unordered list\nEnter your option");
+﻿Console.WriteLine("DataStructure Algorithms : \n0.Exit\n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detection\n6.Prime numbers between 1 to 1000" +
+    "\n7.unordered list\n8.ordered list\nEnter your option");
 int option = Convert.ToInt32(Console.ReadLine());
 
 DS_Algorithms.Logical_Programs program = new DS_Algorithms.Logical_Programs();
@@ -63,6 +64,11 @@ switch (option)
         Console.WriteLine("Enter word to search:");
         string w = Console.ReadLine();
         ds.UnOrdered(w);
+        break;
+    case 8:
+        Console.WriteLine("Enter word to search:");
+        string order = Console.ReadLine();
+        ds.Ordered(order);
         break;
     default:
         Console.WriteLine("Invalid option");
