@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("DataStructure Algorithms : \n0.Exit\n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detection\n6.Prime numbers between 1 to 1000" +
-    "\n7.unordered list\n8.ordered list\nEnter your option");
+    "\n7.unordered list\n8.ordered list\n9.Balanced Paranthesis\nEnter your option");
 int option = Convert.ToInt32(Console.ReadLine());
 
 DS_Algorithms.Logical_Programs program = new DS_Algorithms.Logical_Programs();
@@ -69,6 +69,11 @@ switch (option)
         Console.WriteLine("Enter word to search:");
         string order = Console.ReadLine();
         ds.Ordered(order);
+        break;
+    case 9:
+        Console.WriteLine("Enter Arithmetic Expression:");
+        string exp = Console.ReadLine();
+        ds.BalancedParanthesis(exp);
         break;
     default:
         Console.WriteLine("Invalid option");
