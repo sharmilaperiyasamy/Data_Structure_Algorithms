@@ -1,4 +1,4 @@
-﻿Console.WriteLine("DataStructure Algorithms : \n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\nEnter your option");
+﻿Console.WriteLine("DataStructure Algorithms : \n1.Permutations\n2.Binary Search the word in file\n3.Insertion Sort\n4.Bubble Sort\nEnter your option");
 int option = Convert.ToInt32(Console.ReadLine());
 
 DS_Algorithms.Logical_Programs program = new DS_Algorithms.Logical_Programs();
@@ -30,7 +30,18 @@ switch (option)
         }
         program.InsertionSort(array);
         break;
-
+    case 4:
+        Console.WriteLine("Enter number of values to add : ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++)
+        {
+            Console.WriteLine("Enter the numbers to add : ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            arr[i] = x;
+        }
+        program.BubbleSort(arr);
+        break;
         default:
         Console.WriteLine("Invalid option");
         break;
